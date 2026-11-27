@@ -23,7 +23,12 @@ public class StudentRegistration {
 
         System.out.println("--- Registered Students (" + students.size() + ") ---");
         for (int i = 0; i < students.size(); i++) {
-            System.out.println((i + 1) + ". " + students.get(i));
+            student currentStudent = students.get(i);
+            System.out.printf("%d. Name: %s | Age: %d | Grade: %.2f%n",
+                    (i + 1),
+                    currentStudent.getName(),
+                    currentStudent.getAge(),
+                    currentStudent.getGrade());
         }
     }
 
