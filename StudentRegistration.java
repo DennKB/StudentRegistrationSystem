@@ -2,16 +2,26 @@ import java.util.ArrayList;
 
 public class StudentRegistration {
 
-    static ArrayList<String> students = new ArrayList<>();
+    static ArrayList<student> students = new ArrayList<>();
+    Student newStudent;
 
-    public static void add(String n, int a, double g) {
+    public static void add(String name, int age, double grade) {
 
-        students.add(n);
+        newStudent = new Student(name, age, grade);
+
+        if (name.isBlank() || name = null) { throw new IllegalArgumentException("Student must have a name"); }
+        if (age < 5 || age > 90) { throw new IllegalArgumentException("Student must be of valid age"); }
+        if (grade < 0 || grade > 100) { throw new IllegalArgumentException("Student must have a valid grade"); }
+        for (int x = 0 ; x < Students.size() ; x++) {
+            if (students.get(x).getName().equalsIgnoreCase(name) && students.get(x).getAge() == age && students.get(x).getGrade() == grade) { throw new IllegalArgumentException("Student already exists in the system"); }
+        }
+
+        students.add(newStudent);
 
         System.out.println("Student Added!");
-        System.out.println("Name: " + n);
-        System.out.println("Age: " + a);
-        System.out.println("Grade: " + g);
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Grade: " + grade);
     }
 
     public static void display() {
