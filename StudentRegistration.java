@@ -8,7 +8,7 @@ public class StudentRegistration {
 
         Student newStudent = new Student(name, age, grade);
 
-        if (name.isBlank() || name = null) { throw new IllegalArgumentException("Student must have a name"); }
+        if (name.isBlank() || name == null) { throw new IllegalArgumentException("Student must have a name"); }
         if (age < 5 || age > 90) { throw new IllegalArgumentException("Student must be of valid age"); }
         if (grade < 0 || grade > 100) { throw new IllegalArgumentException("Student must have a valid grade"); }
         for (int x = 0 ; x < students.size() ; x++) {
