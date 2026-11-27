@@ -28,7 +28,7 @@ public class StudentRegistration {
 
     public static void add(String name, int age, double grade) {
 
-        student newStudent = new student(name, age, grade);
+        Student newStudent = new Student(name, age, grade);
 
         if (name.isBlank()) { throw new IllegalArgumentException("Student must have a name"); }
         if (age < 5 || age > 90) { throw new IllegalArgumentException("Student must be of valid age"); }
