@@ -16,8 +16,14 @@ public class StudentRegistration {
 
     public static void display() {
 
-        for (String s : students) {
-            System.out.println(s);
+        if (students.isEmpty()) {
+            System.out.println("No students registered.");
+            return;
+        }
+
+        System.out.println("--- Registered Students (" + students.size() + ") ---");
+        for (int i = 0; i < students.size(); i++) {
+            System.out.println((i + 1) + ". " + students.get(i));
         }
     }
 
