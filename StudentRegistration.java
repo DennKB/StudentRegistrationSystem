@@ -13,7 +13,7 @@ public class StudentRegistration {
         if (age < 5 || age > 90) { throw new IllegalArgumentException("Student must be of valid age"); }
         if (grade < 0 || grade > 100) { throw new IllegalArgumentException("Student must have a valid grade"); }
         for (int x = 0 ; x < Students.size() ; x++) {
-            if (students.get(x) == newStudent) { throw new IllegalArgumentException("Student already exists in the system"); }
+            if (students.get(x).getName().equalsIgnoreCase(name) && students.get(x).getAge() == age && students.get(x).getGrade() == grade) { throw new IllegalArgumentException("Student already exists in the system"); }
         }
 
         students.add(newStudent);
